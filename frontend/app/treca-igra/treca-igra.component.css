@@ -1,0 +1,197 @@
+.empty-row{
+    text-align:center;
+    justify-content:center;
+}
+
+.ukupna_suma_bg{
+    background-color: rgba(54, 54, 54, 0.555);
+}
+
+.img-radius{
+    border-radius: 20px;
+}
+
+.ukupna_suma{
+    font-family: 'Montserrat';
+    color:rgb(5, 5, 5);
+    font-size:45px;
+    text-align: color;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+
+
+.question-text{
+    font-family: 'Montserrat';
+    color:white;
+    font-size:30px;
+    text-align: left;
+    display: flex;
+    font-weight: 300;
+    line-height: normal;
+    justify-content: left;
+}
+
+.suma_tragac{
+    height: 180px;
+    font-size:60px;
+    border-radius: 20px;
+    border: 8px rgba(0, 199, 27, 0.842) solid;
+    padding-top: 60px;
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.925) ;
+}
+
+#id{
+    border: 5px solid white;
+}
+
+
+.card-text{
+    font-size:30px;
+    border-radius: 20px;
+    font-family: 'Montserrat';
+    color:rgba(255, 255, 255, 0.836);
+    font-weight: 700;
+    text-align: left;
+    display: flex;    
+}
+
+.suma-text-header{
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-size:40px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.card{
+    border: 3px rgb(0, 0, 0) solid;
+    background-color: rgba(0, 0, 0, 0.521);/*rgba(255, 255, 255, 0) ;*/
+    color:white;
+}
+
+.pitanja-text{
+    font-family: 'Montserrat';
+    color:white;
+    /* color:rgba(19, 20, 19, 0.863); */
+    font-size:25px;
+    text-align: left;
+    display: flex;
+    font-weight: 600;
+    line-height: normal;
+    justify-content: left;
+}
+
+.bg-danger{
+    background-color: rgb(255, 52, 52);
+}
+
+.question-text-black{
+    font-family: 'Montserrat';
+    color:white;
+    background-color: rgba(0, 207, 28, 0.5);
+    font-size:30px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.bg_picture{
+    background-image: url('../../assets/img/svemir3.png');
+    width:inherit;
+    max-width: 1000px;
+    min-width:300px;
+    border-radius: 20px;
+    border:5px solid black;
+}
+
+.question-text-header{
+    font-family: 'Montserrat';
+    color:white;
+    font-size:40px;
+    text-align: left;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: left;
+}
+
+.btn-text{
+    color:rgba(240, 255, 240, 0.863);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-text2{
+    color:white;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+}
+
+.animated{
+    -webkit-animation-duration: 5s;animation-duration: 5s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+.tajmer_prva_igra{
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 700;
+    text-align: right;
+    justify-content: right;
+}
+
+.not_red{
+    color:rgba(240, 255, 240, 0.863);
+}
+
+.red{
+    color:rgba(190, 0, 0, 0.863);
+}
+
+.suma{
+    color:rgba(240, 255, 240, 0.863);
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    justify-content: left;
+}
+
+.hide{
+    display:none;
+}

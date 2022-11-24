@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,800&family=Train+One&family=Ubuntu:wght@700&display=swap');
+
+html, body { height: 100%; width: 99.6%;}
+body { 
+    margin: 0;     
+    background-image: linear-gradient(to right,#141E30,#243B55);
+}

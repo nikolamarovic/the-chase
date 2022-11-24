@@ -1,0 +1,196 @@
+<div id='odaberi_sumu'>
+    <div class="container px-4 py-5 bg_picture">
+        <div class='col-lg-12'>
+            <div class="card pitanje_tragac">
+                <div class='card-header'>
+                    <p class='card-text ukupna_suma_white'>BIRANJE SUME</p>
+                </div>
+                <div class='card-body'>
+                    <div id='saigrac_pitanje'>
+                        <p class="card-text pitanja-text" id='ponuda_tragac_poruka'></p>
+                        <input class="btn bg_color_button btn-block btn-text-suma-pitanje" type="button" value="Pitaj saigrača" (click)='pitajSaigraca()' id='saigrac_pitanje_dugme'>
+                    </div>
+                    <div id='saigrac_odgovor' class='hide'>
+                        <!-- <input type="text" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-default" id='odgovor' [(ngModel)]='odgovor_saigraca'>
+                        <button type="button" class="btn btn-success btn-sm btn-text" >Pošalji</button> -->
+                        <p class="card-text pitanja-text" id='saigrac_odgovor_tekst'></p>
+                        <p class='card-text pitanja-text-center' id='tajmer_pred_pocetak_druge_igre'></p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" id='saigrac_odgovor_prikaz' [(ngModel)]='saigrac_odgovor'>
+                            <div class="input-group-append">
+                                <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
+                                <input type="button" class="btn btn-success" value='Pošalji' id='saigrac_odgovor_dugme' (click)='posaljiMisljenje()'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div>
+        <div class='col-lg-12 odaberi_sumu_div' id='odaberi_sumu_tabela' >
+            <table class='table table-bordered' id='tragac_tabela_ponuda'>
+                <tbody>
+                    <tr class='bg-danger'>
+                        <td class='img-radius_tragac'>
+                            <div class="visina_table_tragac table_tragac_text">TRAGAČ</div>
+                        </td>
+                    </tr>
+                    <tr class='bg_color_table'>
+                        <td class='img-radius'>
+                            <div class="visina_table_tragac table_tragac_text"></div>
+                        </td>
+                    </tr>
+                    <tr class='bg-warning' id='veca_suma_td'>
+                        <td class='img-radius' id='veca_suma_11'>
+                            <div class="visina_table_tragac table_tragac_text" id='veca_suma_1' (click)='vecaSuma()'></div>
+                        </td>
+                        <td class='img-radius' id='veca_suma_22'>
+                            <div class="visina_table_tragac table_tragac_text" id='veca_suma_2'></div>
+                        </td>
+                    </tr>
+                    <tr class='bg-primary' id='srednja_suma_td'>
+                        <td class='img-radius' id='srednja_suma_11'>
+                            <div class="visina_table_tragac table_tragac_text" id='srednja_suma_1' (click)='srednjaSuma()'></div>
+                        </td>
+                        <td class='img-radius' id='srednja_suma_22'>
+                            <div class="visina_table_tragac table_tragac_text" id='srednja_suma_2'></div>
+                        </td>
+                    </tr>
+                    <tr class='bg-warning' id='manja_suma_td'>
+                        <td class='img-radius' id='manja_suma_11'>
+                            <div class="visina_table_tragac table_tragac_text" id='manja_suma_1' (click)='manjaSuma()'></div>
+                        </td>
+                        <td class='img-radius' id='manja_suma_22'>
+                            <div class="visina_table_tragac table_tragac_text" id='manja_suma_2'></div>
+                        </td>
+                    </tr>
+                    <tr class='bg_color_table'>
+                        <td class='img-radius'>
+                            <div class="visina_table_tragac table_tragac_text"></div>
+                        </td>
+                    </tr>
+                    <tr class='bg_color_table'>
+                        <td class='img-radius'>
+                            <div class="visina_table_tragac table_tragac_text"></div>
+                        </td>
+                    </tr>
+                    <tr class='bg_color_table'>
+                        <td class='img-radius'>
+                            <div class="visina_table_tragac table_tragac_text"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div id='druga_igra' class='hide'>
+    <div class="container col-xxl-10 px-4 py-5 bg_picture">
+        <div class="row align-items-center" >
+            <div class='col-lg-9 fade-in-pitanje'>
+                <div class="card pitanje_tragac hide" id='rezultat_odgovora_tragac_div'>
+                    <div class="card-body">
+                        <p class="rezultat_odgovora_tekst" id='rezultat_odgovora_tragac_tekst'></p>
+                    </div>
+                </div>
+                <br/>
+                <div class="card pitanje_tragac hide" id='rezultat_odgovora_div'>
+                    <div class="card-body">
+                        <p class="rezultat_odgovora_tekst" id='rezultat_odgovora'></p>
+                    </div>
+                </div>
+                <br/>
+                <div class="card suma_tragac">
+                    <div class="card-body">
+                        <p class="card-text" id='izabrana_suma'></p>
+                    </div>
+                </div>
+                <br/>
+                <div class="card pitanje_tragac">
+                    <div class='card-body'>
+                        <p class="card-text pitanja-text" id='trenutno_pitanje'></p>
+                    </div>
+                </div>
+                <br/>
+                <div class='row reg-log-section'>
+                    <div class='col-lg-4'>
+                        <input class="btn bg_color_button btn-block btn-text" type="button" id='odgovor_1' (click)="potvrdiOdgovor('1')">
+                    </div>
+                    <div class='col-lg-4'>
+                        <input class="btn bg_color_button btn-block btn-text" type="button" id='odgovor_2' (click)="potvrdiOdgovor('2')">
+                    </div>
+                    <div class='col-lg-4'>
+                        <input class="btn bg_color_button btn-block btn-text" type="button" id='odgovor_3' (click)="potvrdiOdgovor('3')">
+                    </div>
+                </div>
+                <br/>
+            </div>
+            <div class='col-lg-3'>
+                <table class='table table-bordered' id='tragac_tabela'>
+                    <tbody class='table-hover'>
+                        <tr class='bg_color_table' id='tabela_tr_1'>
+                            <td class='img-radius_tragac'>
+                                <div class="visina_table_tragac table_tragac_text"  id='tabela_tr_1_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_2'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_2_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_3'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_3_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_4'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_4_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_5'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_5_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_6'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_6_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_7'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_7_text'></div>
+                            </td>
+                        </tr>
+                        <tr class='bg_color_table' id='tabela_tr_8'>
+                            <td class='img-radius'>
+                                <div class="visina_table_tragac table_tragac_text" id='tabela_tr_8_text'></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='druga_igra_kraj' class='hide'>
+    <div class="container col-xxl-10 px-4 py-5 bg_picture">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="card img-radius_tragac">
+                    <div class='card-header ukupna_suma_white' id='zavrsena_druga_igra_poruka_header'></div>
+                    <div class="card-body">
+                        <p class="pitanja-text" id='zavrsena_druga_igra_poruka'></p>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-success btn-lg btn-text hide img-radius_tragac" (click)='zapocniPrvuIgruSaigrac()' id='zapocni_prvu_igru_saigrac_btn'>Započni prvu igru</button>
+                        </div>
+                        <p class='pitanja-text' id='tajmer_pred_trecu_igru'></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

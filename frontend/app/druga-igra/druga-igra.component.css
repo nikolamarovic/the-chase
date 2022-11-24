@@ -1,0 +1,398 @@
+.empty-row{
+    text-align:center;
+    justify-content:center;
+}
+
+.ukupna_suma_bg{
+    background-color: rgba(54, 54, 54, 0.555);
+}
+
+.bg_picture{
+    background-image: url('../../assets/img/svemir3.png');
+    width:fit-content;
+    border-radius: 20px;
+    border:5px solid black;
+}
+
+.img-radius{
+    border-radius: 1px;
+}
+
+.ukupna_suma{
+    font-family: 'Montserrat';
+    color:rgb(5, 5, 5);
+    font-size:45px;
+    text-align: color;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.question-text{
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-size:30px;
+    text-align: left;
+    display: flex;
+    font-weight: 300;
+    line-height: normal;
+    justify-content: left;
+}
+
+.suma-text-header{
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-size:40px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.question-text-header{
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-size:40px;
+    text-align: left;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: left;
+}
+
+.btn-text{
+    color:rgba(240, 255, 240, 0.863);
+    border: 2px solid black;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    min-height: 90px;
+    /* height: fit-content; */
+    word-wrap: break-word;
+    /* width: fit-content; */
+}
+
+.btn-text-suma-pitanje{
+    color:rgba(240, 255, 240, 0.863);
+    border: 2px solid black;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+}
+
+.bg_color_button{
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 20px;
+}
+
+.bg_color_button_primary{
+    background-color: rgb(0, 119, 255);
+    border-radius: 20px;
+}
+
+.bg_color_success{
+    background-color: rgb(0, 184, 9);
+}
+
+.bg_color_button:hover{
+    background-color: rgba(255, 255, 255, 0.363)
+}
+
+.animated{
+    -webkit-animation-duration: 5s;animation-duration: 5s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+.tajmer_prva_igra{
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 700;
+    text-align: right;
+    justify-content: right;
+}
+
+.not_red{
+    color:rgba(240, 255, 240, 0.863);
+}
+
+.red{
+    color:rgba(190, 0, 0, 0.863);
+}
+
+.suma{
+    color:rgba(240, 255, 240, 0.863);
+    font-family: 'Montserrat';
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    justify-content: left;
+}
+
+.hide{
+    display:none;
+}
+
+.visina_table_tragac{
+    height: 60px;
+}
+
+.table_tragac_text{
+    color:rgba(0, 0, 0, 0.589);
+    font-family: 'Montserrat';
+    font-size: 30px;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.tragac_polje{
+    background-color: rgba(114, 0, 0, 0.726);
+}
+
+.korisnik_polje{  
+    background-color: rgba(53, 124, 255, 0.726);
+}
+
+.img-radius_tragac{
+    border-radius: 15px;
+}
+
+.padding_bottom_tragac{
+    padding: 22px;
+}
+
+#tragac_tabela.table-bordered > tbody > tr > td{
+    border:6px solid rgba(0, 0, 0, 0.788);
+}
+
+#tragac_tabela.table-bordered > tbody > tr > td:hover{
+    background-color: rgba(255, 255, 255, 0.39);
+} 
+
+#tragac_tabela_ponuda > tbody > tr > td{
+    border:6px solid rgba(0, 0, 0, 0.788);
+}
+
+#veca_suma_td > td:hover{
+    background-color: rgb(255, 238, 0);
+}
+
+#srednja_suma_td > td:hover{
+    background-color: rgba(0, 140, 255, 0.801);
+}
+
+#manja_suma_td > td:hover{
+    background-color: rgb(255, 238, 0);
+}
+/* #tragac_tabela_ponuda > tbody > tr > td:hover{
+    background-color: rgba(255, 255, 255, 0.39);
+} */
+
+.center-items{
+    display:flex;
+    justify-content: center;
+}
+
+.left{
+    justify-content: left;
+}
+
+.right{
+    justify-content: right;
+}
+
+.reg-log-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.reg-log-fill{
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    word-wrap: break-word;
+}
+
+
+.pitanja-text{
+    font-family: 'Montserrat';
+    color:white;
+    /* color:rgba(19, 20, 19, 0.863); */
+    font-size:30px;
+    text-align: left;
+    display: flex;
+    font-weight: 600;
+    line-height: normal;
+    justify-content: left;
+}
+
+.pitanja-text-center{
+    font-family: 'Montserrat';
+    color:white;
+    /* color:rgba(19, 20, 19, 0.863); */
+    font-size:30px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.pitanja-text-smaller{
+    font-family: 'Montserrat';
+    color:white;
+    /* color:rgba(19, 20, 19, 0.863); */
+    font-size:25px;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+    line-height: normal;
+    justify-content: center;
+}
+
+.bg_color_table{
+    background-color: rgba(255, 255, 255, 0.377);
+}
+
+.card{
+    border: 3px rgb(0, 0, 0) solid;
+    background-color: rgba(0, 0, 0, 0.521);/*rgba(255, 255, 255, 0) ;*/
+    color:white;
+}
+
+/* .card:hover{
+    background-color: rgba(255, 255, 255, 0.151);
+} */
+
+.pitanje_tragac{
+    /* height:300px; */
+    border-radius: 20px;
+}
+
+.suma-text-header{
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-size:40px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.ukupna_suma{
+    font-family: 'Montserrat';
+    color:rgb(5, 5, 5);
+    font-size:45px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ukupna_suma_white{
+    font-family: 'Montserrat';
+    color:white;
+    justify-content: center;
+    display:flex;
+    font-size:45px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fade-in-pitanje {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+.odaberi_sumu_div{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#tragac_tabela_ponuda{
+    min-width:fit-content;
+    max-width: 500px;
+}
+
+.rezultat_odgovora_tekst{
+    font-family: 'Montserrat';
+    color:white;
+    /* color:rgba(19, 20, 19, 0.863); */
+    font-size:30px;
+    text-align: left;
+    display: flex;
+    font-weight: 600;
+    line-height: normal;
+    justify-content: left;
+}
+
+.suma_tragac{
+    height: 180px;
+    font-size:60px;
+    border-radius: 20px;
+    padding-top: 60px;
+    font-family: 'Montserrat';
+    color:rgba(19, 20, 19, 0.863);
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    border: 3px rgb(0, 0, 0) solid;
+    background-color: rgba(0, 0, 0, 0.521);/*rgba(255, 255, 255, 0) ;*/
+    color:white;
+}

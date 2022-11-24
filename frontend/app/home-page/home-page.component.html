@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-dark mr-sm-2">
+    <p class='navbar-brand logo' (click)='vratiNaPocetnu()'>POTERA</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse welcome-menu-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a id='home_page' class='nav-link welcome-weight' (click)="preusmeri('home_page')">Nova igra</a>
+        </li>
+        <li class="nav-item">
+          <a id='rang_list' class='nav-link welcome-weight' (click)="preusmeri('rang_list')">Rang lista</a>
+        </li>
+        <li class="nav-item">
+            <a id='my_profile' class='nav-link welcome-weight' (click)="preusmeri('my_profile')">Moj profil</a>
+          </li>
+      </ul>
+      <button class="btn btn-outline-danger " type="submit" value='Odjavi se' (click)='odjaviMe()'>Odjavi se</button>
+    </div>
+</nav>
+
+<div class="container col-xxl-8 px-4 py-5" id='zapocinjanje_igre'>
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="../../assets/img/new_game_wall.jpg" class="d-block mx-lg-auto img-radius" alt="Bootstrap Themes" width="450" height="400" loading="lazy">
+    </div>
+    <div class="col-lg-6" *ngIf='this.dobrodoslica_prikaz'>
+      <h1 class="display-5 fw-bold lh-1 mb-3 welcome-menu-left">{{this.korisnik.kor_ime}}, dobrodošli!</h1>
+      <p class="lead welcome-text">Ovde možete započeti novu igru. Pokušaćemo da Vam pronadjemo saigrača što pre!</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-success btn-lg px-4 me-md-2 btn-text" (click)='zapocniTrazenjeSaigraca()'>Započni igru</button>
+      </div>
+    </div>
+    <div class="col-lg-6" *ngIf='this.zapocni_trazenje_saigraca' id='zapocni_trazenje_saigraca'>
+      <h1 class="display-5 fw-bold lh-1 mb-3 welcome-menu-left">Potraga za saigračem</h1>
+      <p  class="lead welcome-text" id='tajmer_trazenje_igraca_iznad'>Čekamo još nekoga da se priključi...</p>
+      <p  class="lead welcome-text" id='tajmer_trazenje_igraca'>Preostalo vreme: {{this.tajmer_zapocni_igru.sec}} sekundi.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+        <button type="button" class= "btn btn-success btn-lg px-4 me-md-2 btn-text hide" id='zapocni_igru_ponovo' (click)='zapocniTrazenjeSaigraca()'>Pokušaj ponovo</button>
+      </div>
+    </div>
+    <div class="col-lg-6 hide" id='pronadjen_saigrac'>
+      <h1 class="display-5 fw-bold lh-1 mb-3 welcome-menu-left" id='saigrac_ime'></h1>
+      <p class="lead welcome-text" id='pocetak_prve_runde_text'></p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start" >
+        <button type="button" class="btn btn-success btn-lg px-4 me-md-2btn btn-text  hide" id='pocetak_prve_runde_btn' (click)='zapocniPrvuIgru()'>Započni prvu rundu</button>
+      </div>
+    </div>
+  </div>
+  <div class="row flex-lg-row-reverse align-items-center g-3 py-3">
+    <div class="col-lg-6 empty-row">
+      <p class='quote-text'>"A good decision is based on knowledge and not on numbers."</p>
+      <p class='quote-text-writer'>Plato</p>
+    </div>
+    <div class="col-lg-6 empty-row">
+      <p class='quote-text'>"There is no wealth like knowledge, and no poverty like ignorance."</p>
+      <p class='quote-text-writer'>
+        Buddha
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id='prva_igra_komponenta' class='hide'>
+  <app-prva-igra [korisnik]='this.korisnik' [room]='this.room'></app-prva-igra>
+</div>
+
+<div id='druga_igra_komponenta' class='hide'>
+  <app-druga-igra [korisnik]='this.korisnik' [room]='this.room'></app-druga-igra>
+</div>
+
+<div id='treca_igra_komponenta' class='hide'>
+  <app-treca-igra [korisnik]='this.korisnik' [room]='this.room'></app-treca-igra>
+</div>

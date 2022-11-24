@@ -1,0 +1,31 @@
+<mat-grid-list cols="6" rowHeight="100px">
+    <mat-grid-tile [colspan] = '1.5' >        
+        <p class='logo' (click)='returnTo()'>POTERA</p>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = '4.5' class='menu'></mat-grid-tile>
+</mat-grid-list>
+<div class='row'>
+    <div class='col-md-12'>
+        <p class='login-text'>Prijava</p>
+    </div>
+</div>
+<div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4 login-form'>
+        <div id='formContent'>
+            <br/>
+            <div class="fadeIn first">
+                <img src="../../assets/img/user_icon.png" id="icon" alt="User Icon" height="">
+            </div>
+            <form>
+                <input type="text" id="login" class="fadeIn second login-text" name="login" placeholder="Korisničko ime" [(ngModel)]='kor_ime'>
+                <input type="password" id="password" class="fadeIn third login-text" name="login" placeholder="Lozinka" [(ngModel)]='lozinka'>
+                <input type="submit" class="fadeIn fourth login-text" value="Uloguj se" (click)='loginUser()'>
+                <p class='login-error' name="fieldName" ngDefaultControl >{{this.greska}}</p>
+            </form>
+        </div>
+    </div>
+    <div class='col-md-4'></div>
+</div>
+    
+    

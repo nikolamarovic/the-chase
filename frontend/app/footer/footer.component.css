@@ -1,0 +1,31 @@
+.footer-row{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-row1{
+    color:rgba(240, 255, 240, 0.863);
+}
+
+.footer-text{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    font-size: 20px;
+}
+
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+  
+
+@media only screen and (max-width: 700px) {
+    .footer-row1 {
+        display: none;
+    }
+}

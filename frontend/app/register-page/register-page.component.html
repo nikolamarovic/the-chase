@@ -1,0 +1,39 @@
+<mat-grid-list cols="6" rowHeight="100px">
+    <mat-grid-tile [colspan] = '1.5' >        
+        <p class='logo' (click)='returnTo()'>POTERA</p>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan] = '4.5' class='menu'></mat-grid-tile>
+</mat-grid-list>
+<div *ngIf='!nastavi' class='row'>
+    <div class='col-md-12'>
+        <p class='register-text'>Registracija</p>
+    </div>
+</div>
+<div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4 register-form'>
+        <div id='formContent'>
+            <div *ngIf='!this.nastavi'>
+                <br/>
+                <div class="fadeIn first">
+                    <img src="../../assets/img/user_icon.png" id="icon" alt="User Icon" height="">
+                </div>
+                <form>
+                    <input type="text" id="login" class="fadeIn second register-text" name="login" placeholder="Korisničko ime" [(ngModel)]='novi_korisnik.kor_ime'>
+                    <input type="text" id="login" class="fadeIn second register-text" name="login" placeholder="Mejl" [(ngModel)]='novi_korisnik.mejl'>
+                    <input type="password" id="password" class="fadeIn third register-text" name="login" placeholder="Lozinka" [(ngModel)]='novi_korisnik.lozinka'>
+                    <input type="password" id="password" class="fadeIn third register-text" name="login" placeholder="Ponovite lozinku" [(ngModel)]='this.ponovljena_lozinka'>
+                    <input type="submit" class="fadeIn fourth register-text" value="Potvrdi" (click)='registerUser()'>
+                    <p class='register-error' name="fieldName" ngDefaultControl >{{this.greske}}</p>
+                </form>
+            </div>
+            <div *ngIf='nastavi'>
+                <br/>
+                <p class='register-success'>Uspešna registracija! Predjite na stranu za prijavu.</p>
+                <input type="submit" class="fadeIn fourth" value="Prijava" (click)='redirectToLoginPage()'>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-4'></div>
+</div>
+

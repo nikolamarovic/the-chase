@@ -1,0 +1,69 @@
+<div class="container col-xxl-8 px-4 py-5 bg_picture" id='prva_igra'>
+    <div id='prva_igra_u_toku'>
+      <div class="row flex-lg-row-reverse align-items-center" >
+        <div class="col-lg-12">
+          <div class="card suma_tragac img-radius">
+            <div class="card-body">
+              <p id='ukupna_suma'></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="row flex-lg-row-reverse align-items-center img-radius">
+        <div class="col-lg-12">
+          <div class='card img-radius'>
+            <div class='card-body'>
+              <p class='card-text' id='igrac_na_potezu'></p>
+            </div>
+          </div>
+          <div class="alert question-text center" role="alert"></div>
+        </div>
+      </div>
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 img-radius">
+        <div class='col-lg-6'>
+          <p class='tajmer_prva_igra not_red' id='tajmer_prva_igra'></p>
+        </div>
+        <div class='col-lg-6'>
+          <p class='suma' id='postignuta_suma' name="fieldName"></p>
+        </div>
+        <div class="col-lg-12">
+          <div class="card img-radius">
+            <div class="card-header question-text-header " id='broj_pitanja'></div>
+            <div class="card-body">
+              <p class="card-text pitanja-text img-radius" id='pitanje'></p>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-default" id='odgovor' [(ngModel)]='odgovor'>
+                <input type="button" class="btn btn-success btn-sm btn-text" value="Potvrdi" (click)='potvrdiOdgovor()' id='btn_potvrdi'>
+                <input type="button" class="btn btn-warning btn-sm btn-text2" value="Dalje" (click)='dalje()' id='btn_dalje'>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-lg-12 animated fadeOut hide' id='tacan_odgovor'>
+          <div class="alert question-text-black center" role="alert">Tačan odgovor!</div>
+        </div>
+        <div class='col-lg-12 animated fadeOut hide' id='netacan_odgovor'>
+          <div class="alert bg-danger question-text center" role="alert" id='netacan_odgovor_tekst'>Netačan odgovor...</div>
+        </div>
+      </div>
+    </div>
+    <div id='prva_igra_zavrsena' class='hide'>
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 img-radius">
+        <div class="col-lg-12">
+          <div class="card img-radius">
+            <div class='card-header question-text-header'>
+              Vreme je isteklo...
+            </div>
+            <div class="card-body">
+              <p class="card-text pitanja-text img-radius" id='zavrsena_prva_igra_poruka'></p>
+              <div class="input-group mb-3">
+                <button type="button" class="btn btn-success btn-lg  btn-text img-radius" (click)='zapocniDruguIgru()' id='zapocni_drugu_igru_btn'>Započni drugu igru</button>
+                <button type="button" class="btn btn-success btn-lg  btn-text img-radius" (click)='zapocniPrvuIgruPonovo()' id='zapocni_prvu_igru_ponovo_saigrac'>Započni prvu igru</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

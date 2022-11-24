@@ -1,0 +1,101 @@
+.empty-row{
+    display: flex;
+    justify-content:center;
+}
+
+.logo{
+    font-family: 'Train One';
+    color:honeydew;
+    font-size: 30px;
+    display:flex;
+    justify-content: left;
+}
+
+.welcome-menu-center{
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    text-align: center;
+    line-height: normal;
+    justify-content: center;
+}
+
+.welcome-menu-right{
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    text-align: right;
+    line-height: normal;
+    justify-content: right;
+}
+
+.welcome-weight{
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.welcome-title{
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    font-size: 45px;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: center;
+}
+
+.welcome-text{
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    font-size:25px;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+    line-height: normal;
+    justify-content: center;
+}
+
+a{
+    font-family: 'Montserrat';
+    color:rgba(240, 255, 240, 0.863);
+    font-size:25px;
+    text-align: center;
+    display: flex;
+    font-weight: 300;
+    line-height: normal;
+    justify-content: center;
+}
+
+.reg-log-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-odgovor{
+    width: 220px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.btn-reg{
+    width: 30%; 
+    font-family: 'Montserrat';
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+}
+
+.btn-log{
+    width: 30%;
+    font-family: 'Montserrat';
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-weight: 700;
+}
+
+.btn-text{
+    font-weight: 700;
+}
